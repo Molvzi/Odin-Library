@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Library</h1>
+        <div class="books-grid" id="booksContainer"></div>
+    </div>
+    <button class="add-button" onclick="openModal()">+</button>
+
+    <div id="addBookModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>添加新书</h2>
+            <form id="addBookForm">
+                <div class="form-group">
+                    <label for="title">书名:</label>
+                    <input type="text" id="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="author">作者:</label>
+                    <input type="text" id="author" required>
+                </div>
+                <div class="form-group">
+                    <label for="pages">页数:</label>
+                    <input type="number" id="pages" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="cover">封面URL:</label>
+                    <input type="text" id="cover" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">描述:</label>
+                    <textarea id="description" required></textarea>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="isRead">
+                    <label for="isRead">已读</label>
+                </div>
+                <button type="submit">添加</button>
+            </form>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
